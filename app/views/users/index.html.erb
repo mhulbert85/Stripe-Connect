@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="content">
+        <h1>Stripe Connect: Express Accounts</h1>
+        <p>Express enables your platform to manage payout schedules,
+            customize the flow of funds, and control branding.
+            Stripe will handle onboarding, account management,
+            and identity verification for your platform.
+            <%= link_to "view integration guide", "https://stripe.com/docs/connect/express-accounts", :target => "_blank" %>
+        </p>
+        <%= button_to "Connect with Stripe", stripe_express_path, :id => "stripe-connect-btn" %>
+    </div>
+</div>
+
+<script>
+    const stripe = Stripe('<%= Rails.configuration.stripe[:publishable_key] %>');
+    const checkoutButton = document.getElementById('checkout-btn');
+
+    checkoutButton.addEventListener('click', function () {
+        stripe.redirectToCheckout({
+            sessionId: '<%= @session %>' // Stripe session id required for redirect
+        }).then((result) => {
+            if (result.error) console.log(result.error.message)
+        });
+    });
+</script>
