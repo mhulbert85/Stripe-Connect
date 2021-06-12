@@ -12,3 +12,6 @@ If you wish to clone this repository and run locally you will need to duplicate 
 - Valid Stripe public key & secret key
 - Stripe API version : [2020-08-27](https://stripe.com/docs/upgrades#2020-08-27)
 - Rails 6.1
+
+#### TODO
+- Add webhooks & display errors/messages etc
