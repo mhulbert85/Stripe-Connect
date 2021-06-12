@@ -3,7 +3,7 @@
 ### Overview
 With Express accounts, you can quickly onboard users so they can be paid immediately. You can customize the branding of the Express onboarding flow and dashboard. Stripe hosts the dashboard—you can grant access through your platform so your users can access it.
 
-`----->>>>>` [**Try the Live Demo**]() `<<<<<-----`
+`----->>>>>` [**Try the Live Demo**](https://stripe-connect-express-rails.herokuapp.com/) `<<<<<-----`
 
 #### Instructions
 If you wish to clone this repository and run locally you will need to duplicate the `.env-template` file in you root directory, rename it `.env` and enter your API Keys accordingly.
